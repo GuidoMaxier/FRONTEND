@@ -117,3 +117,33 @@ function profile() {
 function cerrarModalProfile() {
     document.querySelector(".modal-profile").style.display = "none";  
 }
+
+
+
+// Obtener el elemento de imagen de perfil
+const imagenPerfil = document.getElementById('imagen_perfil');
+// Obtener los elementos de input
+const usernameInput = document.getElementById('usernameInput');
+const nombreInput = document.getElementById('nombreInput');
+const apellidoInput = document.getElementById('apellidoInput');
+const emailInput = document.getElementById('emailInput');
+
+// Obtener los datos del usuario almacenados en sessionStorage
+const usuarioString = sessionStorage.getItem('usuarioLogeado');
+
+if (usuarioString) {
+  // Si se encontraron datos del usuario en sessionStorage
+  const usuario = JSON.parse(usuarioString);
+
+  // Establecer los valores en los elementos HTML
+  usernameInput.value = usuario.username;
+  nombreInput.value = usuario.nombre;
+  apellidoInput.value = usuario.apellido;
+  emailInput.value = usuario.email;
+  
+  // Si tienes la ruta de la imagen del perfil en sessionStorage, puedes usarla para establecer la imagen.
+  const rutaImagenPerfil = sessionStorage.getItem('ruta_imagen_perfil');
+  if (rutaImagenPerfil) {
+    imagenPerfil.src = rutaImagenPerfil;
+  }
+}

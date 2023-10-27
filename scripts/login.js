@@ -5,7 +5,7 @@ if (!localStorage.getItem('usuarios')) {
       {
         username: 'anita',
         clave: 'admin123',
-        avatar: '../img/avatar/man.png',
+        avatar: '../img/avatar/soldier.png',
         nombre: 'Ana',
         apellido: 'Sayago',
         email: 'anita@gmail.com',
@@ -15,7 +15,7 @@ if (!localStorage.getItem('usuarios')) {
       {
         username: 'crist',
         clave: 'admin123',
-        avatar: '../img/avatar/man.png',
+        avatar: '../img/avatar/monkey.png',
         nombre: 'Cristopher',
         apellido: '',
         email: 'cristopher@gmail.com',
@@ -25,18 +25,17 @@ if (!localStorage.getItem('usuarios')) {
       {
         username: 'eli',
         clave: 'admin123',
-        avatar: '../img/avatar/man.png',
+        avatar: '../img/avatar/pilot.png',
         nombre: 'Eliezer',
         apellido: '',
         email: 'eliezer@gmail.com',
         fn: '2000-01-01',
         rol: 'administrador',
       },
- 
       {
         username: 'hernan',
         clave: 'admin123',
-        avatar: '../img/avatar/man.png',
+        avatar: '../img/avatar/alien.png',
         nombre: 'Hernan',
         apellido: 'Casasola',
         email: 'hernan.casasola@gmail.com',
