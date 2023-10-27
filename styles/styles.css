@@ -58,9 +58,11 @@ header h1 {
 }
 
 
+
 /* Estilo del pie de página */
 footer {
     background-color: #23272a;
+    color: #fff;
     padding: 1px;
     text-align: center;
     position: fixed;
@@ -68,15 +70,21 @@ footer {
     width: 100%;
 }
 
+
+footer a:hover {
+    text-decoration:dashed;
+    color:#e7b920;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
 footer p {
     font-size: 14px;
     color: #ccc;
 }
-
-
-
-
-
 
 
 
@@ -142,21 +150,5 @@ h1{
     font-family: 'ABeeZee', sans-serif;
 }
 
-#pelota{
-    animation:animacion .5s alternate infinite ease-in;
-    height: 3%;
-    width: 3%;
-    border-radius: 50%;
-    
 
-}
-
-@keyframes animacion{
-    0%{
-        transform: translateY(-20%);
-    }
-    100%{
-        transform: translateY(0%);
-    }
-}
 
