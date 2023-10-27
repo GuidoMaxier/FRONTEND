@@ -95,10 +95,6 @@ h2 {
     color: #fff;
 }
 
-p {
-    font-size: 16px;
-    color: #ccc;
-}
 
 /* Estilo del pie de página */
 footer {
@@ -159,7 +155,7 @@ tbody td{
     border: 1.5px solid darkgray;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
     .div_img_medianas {
         background-color: transparent;
         display: grid;
@@ -171,17 +167,22 @@ tbody td{
     
     .img_medianas {
         
-        height:30vw;
+        /*height:30vw;
         width: 20vw;
         border-radius: 5%;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-        
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);*/
+        display: none;
     }
 
-
+    #textsport{
+        display: block;
+    }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px){
+    p{
+        display: none;
+    }
     
 
 }
