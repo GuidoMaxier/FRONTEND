@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <form action="" class="formulario">
+        <h1 class="formulario__titulo">Contactarnos</h1>
+        <input type="text" class="formulario__input">
+        <label for="" class="formulario__label">Nombres</label>
+        <input type="text" class="formulario__input">
+        <div class="error" id="error-firstname"></div>
+        <label for="" class="formulario__label">Correo</label>
+        <input type="text" class="formulario__input">
+        <label for="" class="formulario__label">Teléfono</label>
+        <input type="text" class="formulario__input">
+        <label for="" class="formulario__label">Mensaje</label>
+        <input type="submit" class="formulario__submit">
+
+        
+
+    </form>
+
+    <div class="form-container register-container">
+        <div class="exito" id="exito-usuario"></div>
+        <h1>Registro</h1>
+        <form id="register-form" autocomplete="off">
+            <div class="error" id="error-username"></div>
+            <div class="input-container">
+                <input type="text" id="register-username" name="register-username" placeholder="Usuario" autocomplete="off" required>
+            </div>
+
+            <div class="error" id="error-firstname"></div>
+            <div class="input-container">
+                <input type="text" name="firstname" id="register-firstname" placeholder="Nombre" autocomplete="off" required>
+            </div>
+
+            <div class="error" id="error-lastname"></div>
+            <div class="input-container">
+                <input type="text" name="lastname" id="register-lastname" placeholder="Apellido"autocomplete="off"  required>
+            </div>
+            
+            <div class="error" id="error-email"></div>
+            <div class="input-container">
+                <input type="email" name="email" id="register-email" placeholder="Email"  autocomplete="off" required>
+            </div>
+
+            <div class="error" id="error-password"></div>
+            <div class="input-container">
+                <input type="password" name="password" id="register-password" placeholder="Contraseña" autocomplete="off"  required>
+            </div>
+            
+            <div class="error" id="error-birthdate"></div>
+            <div class="input-container">
+                <label for="register-birthdate" id="label-date">Fecha de Nacimiento</label>
+                <input type="date" name="birthdate" id="register-birthdate" placeholder="dd/mm/aaaa"onclick="hideLabel()">
+            </div>
+
+            <button type="submit" class= "team-button">Registrarse</button>
+        </form>
+        <p class="toggle-form-text">¿Ya tienes una cuenta? <button class="toggle-form-button-login">Iniciar Sesión</button></p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2023 Planeta Deportes
+            <span class="social-icons">
+                <a href="https://www.facebook.com/tucuenta" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/tucuenta" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/tucuenta" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/tucuenta" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Agrega más enlaces a tus redes sociales según sea necesario -->
+            </span>
+        </p>
+    </div>
+</footer>
+
+    <script src="form.js"></script>
+</body>
+</html>
