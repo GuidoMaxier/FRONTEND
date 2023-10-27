@@ -22,6 +22,8 @@ button {
     cursor: pointer;
     margin-right: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
+
 }
 
 button:hover {
@@ -94,11 +96,12 @@ input[type="text"] {
 .imagen-redonda {
     width: 25%;
     height: 25%;
-    border-radius: 50%;
+    border-radius: 20%;
     object-fit: cover;
     overflow: hidden;
     display: flex;
     border: 2px solid #eccb0d;
+    margin-bottom: 5px;
 }
 
 /* Estilos para filas de imágenes */
@@ -173,7 +176,7 @@ input {
   .modal-content-avatar {
     background-color: #000000f6;
     width: 60%;
-    max-width: 250px;
+    max-width: 260px;
     margin: 10% auto;
     padding: 10px;
     border-radius: 10px;
@@ -207,7 +210,9 @@ input {
     width: 50px;
     height: 50px;
     margin: 5px;
-    border-radius: 50%;
+    border-radius: 20%;
+    border: 2px solid #eccb0d;
+    
 
   }
   
@@ -223,4 +228,8 @@ input {
     justify-content: center;
     align-items: center;
 
+  }
+
+  .selected-avatar {
+    border: 2px solid green;
   }

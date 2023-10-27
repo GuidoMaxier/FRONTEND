@@ -27,9 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
 
-
-
-
 // Obtener elementos HTML
 const modal = document.getElementById('modal-avatar');
 const openModalButton = document.getElementById('openModalAvatar');
@@ -49,11 +46,6 @@ function closeModal() {
 openModalButton.addEventListener('click', openModal);
 closeButton.addEventListener('click', closeModal);
 
-// Función para seleccionar un avatar (puedes personalizarla según tus necesidades)
-function seleccionarAvatar(avatarSrc) {
-  // Realiza acciones cuando se selecciona un avatar (por ejemplo, actualizar una imagen de perfil)
-  console.log(`Avatar seleccionado: ${avatarSrc}`);
-}
 
 // Botón para guardar la selección del avatar
 const guardarButton = document.getElementById('guardarButton');
@@ -67,7 +59,51 @@ guardarButton.addEventListener('click', () => {
 
 
 
+function seleccionarAvatar(avatarSrc) {
+  console.log(`Avatar seleccionado: ${avatarSrc}`);
+  // Guarda en el sessionStorage
+  sessionStorage.setItem('usuarioLogeado', JSON.stringify({ ...JSON.parse(sessionStorage.getItem('usuarioLogeado')), avatar: avatarSrc }));
+  
+  // Guarda  en el localStorage si es necesario 
+  const usuarioLocalStorage = localStorage.getItem('usuarios');
+  if (usuarioLocalStorage) {
+    const usuarios = JSON.parse(usuarioLocalStorage);
+    const usuarioLogeado = JSON.parse(sessionStorage.getItem('usuarioLogeado'));
+    const usuarioIndex = usuarios.findIndex(user => user.username === usuarioLogeado.username);
+    if (usuarioIndex !== -1) {
+      usuarios[usuarioIndex].avatar = avatarSrc;
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    }
+  }
+}
+//  avatar seleccionado del sessionStorage
+const usuarioLogeado = JSON.parse(sessionStorage.getItem('usuarioLogeado'));
+const avatarSrc = usuarioLogeado.avatar;
 
+// Actualiza la imagen de perfil 
+const imagenPerfil = document.getElementById('imagen_perfil');
+imagenPerfil.src = avatarSrc;
+
+
+
+// Obtén todas las imágenes de las filas
+const images = document.querySelectorAll('.image-row img');
+
+// Función para cambiar el estilo de la imagen cuando se hace clic
+function toggleImageBorder(event) {
+  const selectedImage = event.target;
+  
+  // Elimina la clase 'selected-avatar' de todas las imágenes
+  images.forEach(image => image.classList.remove('selected-avatar'));
+  
+  // Agrega la clase 'selected-avatar' a la imagen seleccionada
+  selectedImage.classList.add('selected-avatar');
+}
+
+// Agregar el evento de clic a todas las imágenes
+images.forEach(image => {
+  image.addEventListener('click', toggleImageBorder);
+});
 
 
 
