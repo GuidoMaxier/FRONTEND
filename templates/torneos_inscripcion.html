@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos - 25 de mayo</title>
+    <link rel="shortcut icon" href="/img/torneo-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/torneos.css" >
+    <link rel="shortcut icon" href="../img/torneo-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>    
+        <h1>Torneos</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="./reserva.html">Reservas</a></li>
+                <li><a href="./torneos.html">Torneos</a></li>
+                <li><a href="./login.html">Iniciar sesion</a></li>
+                <li><a href="#">Registrarse</a></li>
+            </ul>
+        </nav>
+    <main>
+        
+        <section class="formulario_torneos_inscripcion">
+            <form action="#" class="formulario" id="contacto-form">
+                <h1 class="formulario__titulo">Inscripción</h1>
+        
+                <div class="campo">
+                    <div class="error" id="error-nombres"></div>
+                    <input type="text" id="nombres" class="formulario__input">
+                    <label for="nombres" class="formulario__label">Nombre responsable</label>
+                    
+                </div>
+                <div class="campo">
+                    <div class="error" id="error-nombres"></div>
+                    <input type="text" id="nombres" class="formulario__input">
+                    <label for="nombres" class="formulario__label">DNI</label>
+                    
+                </div>
+        
+                <div class="campo">
+                    <div class="error" id="error-correo"></div>
+                    <input type="email" id="correo" class="formulario__input">
+                    <label for="correo" class="formulario__label">Correo</label>
+                    
+                </div>
+        
+                <div class="campo">
+                    <div class="error" id="error-telefono"></div>
+                    <input type="tel" id="telefono" class="formulario__input">
+                    <label for="telefono" class="formulario__label">Teléfono</label>
+                    
+                </div>
+                <div class="campo">
+                    <div class="error" id="error-telefono"></div>
+                    <input type="tel" id="telefono" class="formulario__input">
+                    <label for="telefono" class="formulario__label">Nombre equipo</label>
+                    
+                </div>
+            <!--<div class="campo">
+                DEBERÍA IR UN CAMPO PARA SELECCIONAR EL DEPORTE (FUTBOL 5/PADDEL/TENIS)
+                    Pensar la función, condicional: si selecciona Futbol 5, debería desplegar otros 6 o 7 campos donde debe ingresar nombre, apellido y DNI de cada integrante del equipo.
+                    En cambio si selecciona paddel, solo un campo solicitando los mismos datos pero para una persona
+                    Si selecciona Tenis (si lo pensamos individual) que no se despliegue nada mas
+                    <div class="error" id="error-telefono"></div>
+                    <input type="tel" id="telefono" class="formulario__input">
+                    <label for="telefono" class="formulario__label">Teléfono</label>
+                    
+                </div>-->
+        
+                <div class="campo">
+                    <textarea id="mensaje" class="formulario__input" rows="4" required></textarea>
+                    <label for="mensaje" class="formulario__text">Mensaje</label>
+                </div>
+        
+                <div class="mensaje-enviado" id="mensaje-enviado"></div>
+        
+                <input type="submit" value="Enviar" class="formulario__submit">
+            </form>
+    
+                
+    
+        </section>
+    </main>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2023 Planeta Deportes
+            <span class="social-icons">
+                <!-- <a href="https://www.facebook.com/Planeta_Deportes" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/Planeta_Deportes" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/Planeta_Deportes" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                <a href="https://github.com/GuidoMaxier/FRONTEND" target="_blank"><i class="fab fa-github"></i></a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+</html>
