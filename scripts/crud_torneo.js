@@ -56,15 +56,16 @@ document.getElementById('btn-add-equipo').addEventListener('click', async functi
    * por medio del uso de template string de JS.
    */
   async function showEquiposTable(){
-    let movies =  await fetchData(API_SERVER+'/api/equipo/', 'GET');
+    let equipos =  await fetchData(API_SERVER+'/api/equipos/', 'GET');
+    console.log(equipos)
     const tableEquipos = document.querySelector('#list-table-equipos tbody');
     tableEquipos.innerHTML='';
     equipos.forEach((equipo, index) => {
       let tr = `<tr>
-                    <td>${equipo.nameTeam}</td>
+                    <td>${equipo.nombre}</td>
                     <td>${equipo.deporte}</td>
                     <td>
-                        <img src="${API_SERVER+equipo.banner}" width="30%">
+                         <img src="${API_SERVER+equipo.logo}" width="30%">
                     </td>
                     <td>
                         <button class="btn-cac" onclick='updateEquipo(${equipo.id})'><i class="fa fa-pencil" ></button></i>
