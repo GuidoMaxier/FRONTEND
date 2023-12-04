@@ -17,60 +17,57 @@
     <main>
         <h2>Equipos</h2>
         <section id="form" >        
-            <form action="" enctype="multipart/form-data" id="form-movie">
+            <form action="" enctype="multipart/form-data" id="form-equipo">
                 <div class="container d-flex">
                     <div class="form-control d-flex-column">
                         <label for="">Nombre equipo</label>
-                        <input type="text" class="input-search" name="title" id="title">
+                        <input type="text" class="input-search" name="nameTeam" id="nameTeam">
                     </div>
                     <div class="form-control d-flex-column">
                         <label for="">Deporte</label>
-                        <input type="text" class="input-search" name="director" id="director">
+                        <select id="deporte" name="deporte">
+                            <option value="Paddel">Paddel</option>
+                            <option value="Tenis">Tenis Doble</option>
+                            <option value="Fútbol">Futbol 5</option>
+                        </select>
                     </div>
-                    <!--
-                    <div class="form-control d-flex-column">
-                        <label for="">Fecha Lanzamiento</label>
-                        <input type="date" class="input-search" name="release_date" id="release_date">
-                    </div>-->
+                    
                     <div class="form-control d-flex-column">
                         <label for="">Logo equipo</label>
                         <input type="file" class="input-search" name="banner" id="banner-form">
                     </div>
-                    <input type="hidden" class="" name="id" id="id_movie">
-                    <button class="btn-cac" type="button" id="btn-add-movie">Agregar</button>
+                    <input type="hidden" class="" name="id" id="id_equipo">
+                    <button class="btn-cac" type="button" id="btn-add-equipo">Agregar</button>
                 </div>
             </form>
         </section>
 
         <h2>Jugadores</h2>
         <section id="form" >        
-            <form action="" enctype="multipart/form-data" id="form-movie">
+            <form action="" enctype="multipart/form-data" id="form-jugador">
                 <div class="container d-flex">
                     <div class="form-control d-flex-column">
                         <label for="">Nombre jugador</label>
-                        <input type="text" class="input-search" name="title" id="title">
+                        <input type="text" class="input-search" name="" id="namePlayer">
                     </div>
                     <div class="form-control d-flex-column">
                         <label for="">DNI</label>
-                        <input type="text" class="input-search" name="director" id="director">
+                        <input type="text" class="input-search" name="dni" id="dni">
                     </div>
                     
                     <div class="form-control d-flex-column">
                         <label for="">Fecha Nacimiento</label>
-                        <input type="date" class="input-search" name="release_date" id="release_date">
+                        <input type="date" class="input-search" name="date" id="date">
                     </div>
-                    <div class="form-control d-flex-column">
-                        <label for="">Nombre equipo</label>
-                        <input type="text" class="input-search" name="title" id="title">
-                    </div>
-                    <input type="hidden" class="" name="id" id="id_movie">
-                    <button class="btn-cac" type="button" id="btn-add-movie">Agregar</button>
+
+                    <input type="hidden" class="" name="id" id="id_jugador">
+                    <button class="btn-cac" type="button" id="btn-add-jugador">Agregar</button>
                 </div>
             </form>
         </section>
         <section id="list" class="container">
             <h2 class="search-title">Listado de equipos</h2>
-            <table id="list-table-movies" class="table">
+            <table id="list-table-equipos" class="table">
                 <thead>
                     <tr>
                         <th>Nombre equipo</th>
@@ -85,7 +82,7 @@
             <br>
             <br>
             <br>
-            <div id="list-div-movies">
+            <div id="list-div-equipos">
 
             </div>
         </section>
@@ -105,5 +102,5 @@
         </p>
     </div>
 </footer>
-
+<script src="../scripts/crud_torneo.js"></script>
 </html>
