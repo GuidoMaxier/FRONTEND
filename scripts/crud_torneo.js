@@ -23,27 +23,28 @@ async function fetchDataWithFile(url, method, formData) {
   const response = await fetch(url, options);
   return await response.json();
 }
+
 //EQUIPOS
 document.getElementById('btn-add-equipo').addEventListener('click', async function () {
   const idEquipo = document.querySelector('#id_equipo');
   const nameTeam = document.querySelector('#nameTeam').value;
   const deporte = document.querySelector('#deporte').value;
-
+  
   //manejo de archivos
   const bannerFileInput = document.querySelector('#banner-form');
   const banner = bannerFileInput.files[0];
 
   const formData = new FormData();
-  formData.append('nameTeam', nameTeam);
+  formData.append('nombre', nameTeam);
+  formData.append('logo', banner);
   formData.append('deporte', deporte);
-  formData.append('banner', banner);
   let result = null;
   if (idEquipo.value !== "") {
     result = await fetchDataWithFile(`${API_SERVER}/api/update_equipo/${idEquipo.value}/`, 'PUT', formData);
   } else {
     result = await fetchDataWithFile(`${API_SERVER}/api/create_equipo/`, 'POST', formData);
   }
-  const formMovie = document.querySelector('#form-equipo');
+  const formEquipo = document.querySelector('#form-equipo');
   idEquipo.value = ''
   formEquipo.reset();
   alert(result.message);
@@ -108,9 +109,13 @@ async function deleteEquipo(id) {
  * Function que permite eliminar un equipo del array del localstorage
  * de acuedo al indice del mismo
  * @param {number} id posición del array que se va a eliminar
+ *
  */
+
 async function updateEquipo(id) {
-  let response = await fetchData(`${API_SERVER}/api/equipos/${id}/`, 'GET');
+  let response = await fetchData(`${API_SERVER}/api/update_equipo/${id}/`, 'GET');
+
+
   const idEquipo = document.querySelector('#id_equipo');
   const nameTeam = document.querySelector('#nameTeam');
   const deporte = document.querySelector('#deporte');
