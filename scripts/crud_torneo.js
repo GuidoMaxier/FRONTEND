@@ -83,7 +83,7 @@ async function showEquiposTable() {
                     <td>${equipo.nombre}</td>
                     <td>${deporte}</td>
                     <td>
-                         <img src="${API_SERVER + equipo.logo}" width="30%">
+                         <img src="${API_SERVER + equipo.logo}" width="30px">
                     </td>
                     <td>
                         <button class="btn-cac" onclick='updateEquipo(${equipo.id})'><i class="fa fa-pencil" ></button></i>
